@@ -1,0 +1,99 @@
+﻿-- AddProduct
+CREATE PROCEDURE AddProduct(
+	@PNAME varchar(50),
+	@Price int,
+	@Description varchar(MAX)
+	)
+AS
+BEGIN
+	insert into S_Product values(@PNAME, @Price, @Description);
+	return 1;
+END
+
+
+
+
+-- FindCIDByName
+CREATE PROCEDURE FindCIDByName(
+	@CName varchar(50),
+	@CID int OUTPUT
+	)
+AS
+BEGIN
+	SET @CID = -1;
+	Select @CID = cid from S_Custom where cname = @CName;
+END
+
+
+-- FindPIDByName
+CREATE PROCEDURE FindPIDByName(
+	@PName varchar(50),
+	@PID int OUTPUT
+	)
+AS
+BEGIN
+	SET @PID = -1;
+	Select @pID = pid from S_Product where pname = @PName;
+END
+
+-- GetCountByPName
+Drop Procedure GetCountByPName;
+CREATE PROCEDURE GetCountByPName(
+	@PName varchar(50),
+	@COUNT int OUTPUT
+	)
+AS
+BEGIN	
+	DECLARE @PID int = -1;		
+	EXEC FindPIDByName @PName, @PID output;	
+	SET @COUNT = 0;
+	Select @COUNT = SUM(Count) from S_Sale where pid = @PID;
+END
+
+-- RemoveProduct
+Drop Procedure RemoveProduct;
+CREATE PROCEDURE RemoveProduct(
+	@Pid int,
+	@Result int OUTPUT
+)
+AS
+BEGIN
+    declare @PName varchar(50) = 'NOT';
+	Select @PName = pname from S_Product where pid = @pid;
+	
+	if @PName = 'NOT'
+	begin
+		set @Result = 0;
+	end
+	else
+	begin
+		delete from S_Sale where PID = @Pid;
+		delete from S_Product where PID = @Pid;
+		set @Result = 1;
+	end
+END
+
+-- RemoveProduct
+Drop Procedure RemoveProduct1;
+CREATE PROCEDURE RemoveProduct1(
+	@Pid int,
+	@Result int OUTPUT
+)
+AS
+BEGIN
+	if Exists (Select * from S_Product where pid = @pid)
+	begin
+		delete from S_Sale where PID = @Pid;
+		delete from S_Product where PID = @Pid;
+		set @Result = 1;		
+	end
+	else
+	begin
+		set @Result = 0;
+	end
+END
+
+
+select * from S_Product;
+select * from S_Custom;
+select * from S_Sale;

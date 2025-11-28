@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "채팅프로그램_클라이언트", "0409_계좌관리클라이언트\채팅프로그램_클라이언트.csproj", "{5E992081-8431-460A-8FAC-77048968B724}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E992081-8431-460A-8FAC-77048968B724}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E992081-8431-460A-8FAC-77048968B724}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E992081-8431-460A-8FAC-77048968B724}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E992081-8431-460A-8FAC-77048968B724}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {58E4BA5E-CA4F-49BA-A42F-3B147D991420}
+	EndGlobalSection
+EndGlobal

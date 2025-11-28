@@ -1,0 +1,41 @@
+## Visual Studio
+.vs/
+*.user
+*.suo
+*.cache
+*.pdb
+
+## Build output
+bin/
+obj/
+Debug/
+Release/
+x64/
+x86/
+
+## NuGet
+packages/
+*.nupkg
+*.snupkg
+
+## Resharper / Rider
+_ReSharper*/
+*.DotSettings.user
+
+## WPF / WinForms
+*.aps
+*.vspscc
+
+## ASP.NET / WCF
+App_Data/
+*.csproj.user
+*.dbmdl
+
+## Logs
+*.log
+
+## Misc
+*.tmp
+*.temp
+*.DS_Store
+Thumbs.db

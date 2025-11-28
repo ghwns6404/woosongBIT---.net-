@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Object_Creation_Destruction", "Object_Creation_Destruction\Object_Creation_Destruction.csproj", "{529D508E-D5DC-4A8D-8E5C-1F8189F9B31C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{529D508E-D5DC-4A8D-8E5C-1F8189F9B31C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{529D508E-D5DC-4A8D-8E5C-1F8189F9B31C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{529D508E-D5DC-4A8D-8E5C-1F8189F9B31C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{529D508E-D5DC-4A8D-8E5C-1F8189F9B31C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CEF9A3C0-2FBB-4579-83C5-151D83547E7E}
+	EndGlobalSection
+EndGlobal

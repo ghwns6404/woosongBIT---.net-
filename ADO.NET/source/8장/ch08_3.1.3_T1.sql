@@ -1,0 +1,19 @@
+/* T1(읽는 트랜잭션)*/
+/* REPEATABLE READ 모드 */
+
+/* 1번째 실행 */
+BEGIN TRAN
+USE Madang
+SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;
+
+SELECT * 
+FROM   Users
+WHERE age BETWEEN 10 AND 30;
+
+/* 3번째 실행 */
+
+SELECT * 
+FROM   Users
+WHERE age BETWEEN 10 AND 30;
+
+COMMIT;
